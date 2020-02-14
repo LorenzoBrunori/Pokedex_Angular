@@ -1,0 +1,7 @@
+<p><button (click)="getPokemon()">GetPokemon</button></p>
+<div *ngIf= "pokedex">
+    <div *ngFor="let x of pokedex.pokemon_entries">
+        <p>ID: {{x.entry_number}} Name:{{x.pokemon_species.name}}</p>
+        <button (click)="getInfo(x.pokemon_species.url)">Info Pokemon</button>
+    </div>
+</div>
